@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex stuff</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            width: 100%;
+        }
+        .allcontainer {
+            display: flex;
+            flex-direction: column;
+            gap: 10%;
+            height: 50%;
+            width: 36%
+        }
+        .container{
+            border: 2px solid black;
+            padding: 30px;
+        }
+        .container-satu {
+            display: flex;
+        }
+        .container-dua {
+            display: flex;
+            justify-content: end;
+        }
+        .container-tiga {
+            display: flex;
+        }
+        .button-box{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="allcontainer">
+
+        <div class="container-satu">
+            <div class="container">
+                Kotak 1
+            </div>
+        </div>
+
+        <div class="container-dua">
+        <div class="container">
+            Kotak 2
+        </div>
+    </div>
+
+        <div class="container-tiga">
+        <div class="container">
+            Kotak 3
+        </div>
+    </div>
+
+    <div class="button-box">
+        <button>Press Me</button>
+    </div>
+
+    </div>
+</body>
+</html>

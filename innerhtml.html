@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sdclass {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="">Pilih Pendidikan Terakhir</label>
+    <select name="tingkat" id="tingkat" onchange="changeClass(this)">
+        <option value="sd" id="sd">tingkat SD</option>
+        <option value="smp" id="smp">tingkat SMP</option>
+        <option value="sma" id="sma">tingkat SMA</option>
+    </select>
+    <br>
+    <label for="">Pilih Tingkat Kelas Mu</label>
+        <select class="sdclass" id="sdclass">
+            <option>Kelas 1</option>
+            <option>Kelas 2</option>
+            <option>Kelas 3</option>
+            <option>Kelas 4</option>
+            <option>Kelas 5</option>
+            <option>Kelas 6</option>
+        </select>
+
+        <select class="sdclass" id="smpclass">
+            <option>Kelas 7</option>
+            <option>Kelas 8</option>
+            <option>Kelas 9</option>
+        </select>
+
+        <select class="sdclass" id="smaclass">
+            <option>Kelas 10</option>
+            <option>Kelas 11</option>
+            <option>Kelas 12</option>
+        </select>
+    <script>
+        function changeClass(e) {
+            var text = document.getElementById("tingkat");
+            if (e.value == "sd") {
+                document.getElementById("sdclass").style.display = "block";
+                document.getElementById("smpclass").style.display = "none";
+                document.getElementById("smaclass").style.display = "none";
+            } else if (e.value == "smp") {
+                document.getElementById("smpclass").style.display = "block";
+                document.getElementById("sdclass").style.display = "none";
+                document.getElementById("smaclass").style.display = "none";
+            } else if (e.value == "sma") {
+                document.getElementById("smaclass").style.display = "block";
+                document.getElementById("sdclass").style.display = "none";
+                document.getElementById("smpclass").style.display = "none";   
+        }
+    }
+    </script>
+</body>
+
+</html>

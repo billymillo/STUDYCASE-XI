@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Pilih Keterangan Ayah</label>
+    <br>
+    <label for="hidupId">Masih Bekerja</label>
+    <input type="radio" name="ayah" id="hidupId" value="hidup" onchange="changeLabel(this)">
+    <br>
+    <label for="meninggalId">Sudah Meninggal</label>
+    <input type="radio" name="ayah" id="meninggalId" value="meninggal" onchange="changeLabel(this)">
+    <br>
+    <label for="tidaktahuId">Tidak Tahu</label>
+    <input type="radio" name="ayah" id="tidaktahuId" value="tidaktahu" onchange="changeLabel(this)">
+    
+    <!-- Section for 'Masih Bekerja' -->
+    <div id="hidupSection" style="display: none;">
+        <label for="">Pendidikan Ayah</label><br>
+        <input type="text"><br>
+        <label for="">Pekerjaan Ayah</label><br>
+        <input type="text"><br>
+        <label for="">Deskripsi Pekerjaan Ayah</label><br>
+        <input type="text"><br>
+        <label for="">Detail Ayah bekerja, berapa lama sudah bekerja, kondisi kesehatan, dan kondisi karir profesinya</label><br>
+        <input type="text">
+    </div>
+    
+    <!-- Section for 'Sudah Meninggal' -->
+    <div id="meninggalSection" style="display: none;">
+        <label for="">Pendidikan Ayah</label><br>
+        <input type="text"><br>
+        <label for="">Pekerjaan Ayah</label><br>
+        <input type="text"><br>
+        <label for="">Deskripsi Pekerjaan Ayah</label><br>
+        <input type="text"><br>
+        <label for="">Detail Pekerjaan Ayah Selama Hidup</label><br>
+        <input type="text">
+    </div>
+
+    <script>
+        function changeLabel(e) {
+            // Hide both sections initially
+            document.getElementById("hidupSection").style.display = "none";
+            document.getElementById("meninggalSection").style.display = "none";
+
+            // Display the correct section based on the selected radio button
+            if (e.value === "hidup") {
+                document.getElementById("hidupSection").style.display = "block";
+            } else if (e.value === "meninggal") {
+                document.getElementById("meninggalSection").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
